@@ -1,16 +1,16 @@
 package ru.itis.repository;
 
+import org.springframework.stereotype.Repository;
 import ru.itis.data.ConnectionData;
 import ru.itis.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@Component
+@Repository
 public class UserRepository {
     private Connection connection;
 

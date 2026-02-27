@@ -1,13 +1,15 @@
 package ru.itis;
 
-import ru.itis.config.AppConfig;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.itis.service.UserService;
 
-public class App {
+@SpringBootApplication
+public class Application {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        ApplicationContext context = SpringApplication.run(Application.class, args);
 
         UserService userService = context.getBean(UserService.class);
 
@@ -15,5 +17,6 @@ public class App {
         userService.updateUser(1L, "Ann");
         userService.getUserById(1L);
         userService.deleteUser(1L);
+
     }
 }

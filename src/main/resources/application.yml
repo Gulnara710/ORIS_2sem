@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ORIS_2
+
+server:
+  port: 8081
+
+info:
+  app:
+    name: ORIS_2
+    description: homework
+    version: 1.0.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
