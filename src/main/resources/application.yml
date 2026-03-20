@@ -1,4 +1,8 @@
 spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
   application:
     name: ORIS_2
   profiles:
