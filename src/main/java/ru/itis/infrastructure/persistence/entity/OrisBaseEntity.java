@@ -1,4 +1,4 @@
-package ru.itis.persistence.entity;
+package ru.itis.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

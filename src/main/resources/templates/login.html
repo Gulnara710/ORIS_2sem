@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Вход</title>
+</head>
+<body>
+<h2>Вход</h2>
+<form method="post" th:action="@{/login}">
+    <label>Email:</label>
+    <input type="email" name="username" required/><br/>
+    <label>Пароль:</label>
+    <input type="password" name="password" required/><br/>
+    <button type="submit">Войти</button>
+</form>
+<div th:if="${param.error}" style="color:red">Неверный email или пароль</div>
+<div th:if="${param.logout}" style="color:green">Вы вышли</div>
+<div th:if="${param.registered}" style="color:green">Регистрация успешна, теперь войдите</div>
+<a th:href="@{/register}">Нет аккаунта? Зарегистрироваться</a>
+</body>
+</html>

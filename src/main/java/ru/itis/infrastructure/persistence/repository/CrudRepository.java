@@ -1,4 +1,4 @@
-package ru.itis.persistence.repository;
+package ru.itis.infrastructure.persistence.repository;
 
 import java.util.List;
 import java.util.Optional;
